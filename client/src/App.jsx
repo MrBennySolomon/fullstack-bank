@@ -8,7 +8,7 @@ function App() {
   const inputRefArr       = useRef([]);
 
   const fetchUsers        = async () => {
-    const tempUsers       = await axios.get("https://bank-mernstack.onrender.com/api/v1/users");
+    const tempUsers       = await axios.get("localhost:5000/api/v1/users");
     setUsers(tempUsers.data.data);
   };
 
@@ -20,7 +20,7 @@ function App() {
 
     if (amountElement.value.length === 0) return;
 
-    const response        = await axios.put(`https://bank-mernstack.onrender.com/api/v1/users/deposite/${userId}/${amountElement.value}`);
+    const response        = await axios.put(`localhost:5000/api/v1/users/deposite/${userId}/${amountElement.value}`);
 
     amountElement.value   = '';
 
@@ -32,7 +32,7 @@ function App() {
 
     if (amountElement.value.length === 0) return;
 
-    const response        = await axios.put(`https://bank-mernstack.onrender.com/api/v1/users/withdraw/${userId}/${amountElement.value}`);
+    const response        = await axios.put(`localhost:5000/api/v1/users/withdraw/${userId}/${amountElement.value}`);
 
     amountElement.value   = '';
 
@@ -45,7 +45,7 @@ function App() {
 
     if (userIdToElement.value.length === 0 || amountElement.value.length === 0)  return;
 
-    const response        = await axios.put(`https://bank-mernstack.onrender.com/api/v1/users/transfer/${userIdFrom}/${userIdToElement.value}/${amountElement.value}`);
+    const response        = await axios.put(`localhost:5000/api/v1/users/transfer/${userIdFrom}/${userIdToElement.value}/${amountElement.value}`);
 
     userIdToElement.value = '';
     amountElement.value   = '';
@@ -59,7 +59,7 @@ function App() {
 
     if (nameElement.value.length === 0 || cashElement.value.length === 0 || creditElement.value.length === 0) return;
 
-    const newUser         = await axios.post("https://bank-mernstack.onrender.com/api/v1/users",{name: nameElement.value,cash: cashElement.value,credit: creditElement.value});
+    const newUser         = await axios.post("localhost:5000/api/v1/users",{name: nameElement.value,cash: cashElement.value,credit: creditElement.value});
 
     nameElement.value     = '';
     cashElement.value     = '';
