@@ -11,7 +11,6 @@
 	"author": "Benny Solomon",
 	"license": "MIT",
 	"devDependencies": {
-		"colors": "^1.4.0"
 	},
 	"dependencies": {
 		"cors": "^2.8.5",
