@@ -2,9 +2,8 @@
   "name": "fullstack-bank",
   "version": "1.0.0",
   "description": "fullstack bank",
-  "main": "client/public/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js"
   },
   "dependencies": {
 		"cors": "^2.8.5",
